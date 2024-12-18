@@ -177,6 +177,14 @@ sleep 3
 convert -size 320x480 xc:none -gravity center -pointsize 16 -fill white -annotate 0 "$TEXT" -rotate 270 /home/Newnop/rotated_text.png
 convert /home/Newnop/LoadingLogo_with_text.png /home/Newnop/rotated_text.png -gravity south -composite /home/Newnop/LoadingLogo_with_rotated_text.png
 sudo fbi -T 2 -noverbose -a /home/Newnop/LoadingLogo_with_rotated_text.png
+
+
+cd RPiPlay/build
+
+sudo ldconfig
+export LD_LIBRARY_PATH=/opt/vc/lib:$LD_LIBRARY_PATH
+find /opt -name "libbrcmEGL.so"
+./rpiplay -a hdmi -l -n NewnopCast
 ```
 
 ### Reboot:
