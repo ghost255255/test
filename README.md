@@ -170,15 +170,18 @@ nano ~/.bashrc
 sudo fbi -T 2 -noverbose -a /home/Newnop/LoadingLogo.png
 
 sleep 1
+
 SSID=$(iwgetid -r)
 IP_ADDRESS=$(hostname -I | awk '{print $1}')
 TEXT="SSID: $SSID\nIP Address: $IP_ADDRESS\nType the ip address\nin your browser and\nlog into the portal\n\n\nDevice SSID: newnop\nDevice PASS: 12345678\n\n\nNewnopcast pass: 31415926"
 
 sleep 3
+
 convert -size 320x480 xc:none -gravity center -pointsize 16 -fill white -annotate 0 "$TEXT" -rotate 270 /home/Newnop/rotated_text.png
 convert /home/Newnop/LoadingLogo_with_text.png /home/Newnop/rotated_text.png -gravity south -composite /home/Newnop/LoadingLogo_with_rotated_text.png
 sudo fbi -T 2 -noverbose -a /home/Newnop/LoadingLogo_with_rotated_text.png
 
+sleep 10
 
 cd RPiPlay/build
 
