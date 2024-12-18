@@ -134,9 +134,9 @@ sudo nano /usr/share/plymouth/themes/pix/pix.script
 sudo nano /boot/config.txt
 ```
 
-## 2.3 Configure Bootloader and display_rotate:
+## 2.3 Configure Bootloader and Display Rotate:
 
-### add these lines below
+### Display Rotate
 #### change display_rotate=0 to display_rotate=3
 
 ### add these lines below
