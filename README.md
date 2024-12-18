@@ -50,11 +50,11 @@ sudo install fbcp /usr/local/bin/
 nano ~/.bashrc
 ```
 
-### Add this line at the end:
+#### Add this line at the end:
 ```
 sudo fbcp &
 ```
-### Reboot:
+#### Reboot:
 ```
 sudo reboot
 ```
@@ -130,17 +130,17 @@ sudo nano /usr/share/plymouth/themes/pix/pix.script
  }
 ```
 
+
+## 2.3 Configure Boot loader and Display Rotate:
 ### Update /boot/config.txt:
 ```
 sudo nano /boot/config.txt
 ```
 
-## 2.3 Configure Boot loader and Display Rotate:
-
-### Display Rotate
+#### Display Rotate
 #### change display_rotate=0 to display_rotate=3
 
-### add these lines below
+#### add these lines below
 ```
 disable_splash=1
 avoid_warnings=1
@@ -165,7 +165,7 @@ sudo apt-get install fbi imagemagick wireless-tools fonts-dejavu libpng-dev imag
 ```
 nano ~/.bashrc
 ```
-### Add the following:
+#### Add the following:
 ```
 sudo fbi -T 2 -noverbose -a /home/Newnop/LoadingLogo.png
 
@@ -173,7 +173,7 @@ sleep 1
 
 SSID=$(iwgetid -r)
 IP_ADDRESS=$(hostname -I | awk '{print $1}')
-TEXT="SSID: $SSID\nIP Address: $IP_ADDRESS\nType the ip address\nin your browser and\nlog into the portal\n\n\nDevice SSID: newnop\nDevice PASS: 12345678\n\n\nNewnopcast pass: 31415926"
+TEXT="Connect your IPhone\nto device WIFI \n\n\nDevice SSID: NewnopSM\nDevice PASS: 12345678\n\n"
 
 sleep 3
 
@@ -221,7 +221,7 @@ Replace ``vc4-kms-v3d`` with ``vc4-fkms-v3d``
 sudo sed -i 's/vc4-kms-v3d/vc4-fkms-v3d/g' /boot/config.txt
 ```
 
-### Alternatively, edit the file manually:
+#### Alternatively, edit the file manually:
 ```
 sudo nano /boot/config.txt
 ```
@@ -253,8 +253,8 @@ make
 
 ## 3.2 Setup Boot images
 
-### replace raspberry IP to <RPI_IP> (etc: 192.168.4.1)
 ### Transfer the Boot images to the Raspberry Pi:
+#### replace raspberry IP to <RPI_IP> (etc: 192.168.4.1)
 ```
 scp LoadingLogo.png Newnop@<RPI_IP>:/home/Newnop/
 ```
@@ -274,7 +274,7 @@ sudo apt-get install fbi
 sudo nano /usr/share/plymouth/themes/pix/pix.script
 ```
 
-### Comment out the following lines:
+#### Comment out the following lines:
 ```
 # message_sprite = Sprite();  //comment
 # message_sprite.SetPosition(screen_width * 0.1, screen_height * 0.9, 10000);  //comment
@@ -286,17 +286,16 @@ sudo nano /usr/share/plymouth/themes/pix/pix.script
  }
 ```
 
+## 3.4 Configure Boot loader and Display Rotate:
 ### Update /boot/config.txt:
 ```
 sudo nano /boot/config.txt
 ```
 
-## 3.4 Configure Boot loader and Display Rotate:
-
-### Display Rotate
+#### Display Rotate
 #### change display_rotate=0 (if its not 0)
 
-### add these lines below
+#### add these lines below
 ```
 disable_splash=1
 avoid_warnings=1
@@ -321,14 +320,14 @@ sudo apt-get install fbi imagemagick wireless-tools fonts-dejavu libpng-dev imag
 ```
 nano ~/.bashrc
 ```
-### Add the following:
+#### Add the following:
 ```
 sudo fbi -T 2 -noverbose -a /home/Newnop/LoadingLogo.png
 
 sleep 1
 SSID=$(iwgetid -r)
 IP_ADDRESS=$(hostname -I | awk '{print $1}')
-TEXT="SSID: $SSID\nIP Address: $IP_ADDRESS\nType the ip address\nin your browser and\nlog into the portal\n\n\nDevice SSID: newnop\nDevice PASS: 12345678\n\n\nNewnopcast pass: 31415926"
+TEXT="Connect your Android\nto device WIFI\n\n\nDevice SSID: NewnopSM\nDevice PASS: 12345678\n\n\nNewnopcast pass: 31415926"
 
 sleep 3
 convert -size 320x480 xc:none -gravity center -pointsize 16 -fill white -annotate 0 "$TEXT" -rotate 270 /home/Newnop/rotated_text.png
@@ -400,7 +399,7 @@ Replace ``vc4-kms-v3d`` with ``vc4-fkms-v3d``
 sudo sed -i 's/vc4-kms-v3d/vc4-fkms-v3d/g' /boot/config.txt
 ```
 
-### Alternatively, edit the file manually:
+#### Alternatively, edit the file manually:
 ```
 sudo nano /boot/config.txt
 ```
@@ -462,7 +461,7 @@ sudo apt install python3-flask
 sudo nano /usr/share/plymouth/themes/pix/pix.script
 ```
 
-### Comment out the following lines:
+#### Comment out the following lines:
 ```
 # message_sprite = Sprite();  //comment
 # message_sprite.SetPosition(screen_width * 0.1, screen_height * 0.9, 10000);  //comment
@@ -484,7 +483,7 @@ sudo nano /boot/config.txt
 ### Display Rotate
 #### change display_rotate=0 (if its not 0)
 
-### add these lines below
+#### add these lines below
 ```
 disable_splash=1
 avoid_warnings=1
@@ -495,7 +494,7 @@ avoid_warnings=1
 sudo nano /boot/cmdline.txt
 ```
 
-### Replace console=tty0  with console=tty3:
+#### Replace console=tty0  with console=tty3:
 console=serial0,115200 console=``tty3`` root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait fbcon=map:10 fbcon=font:ProFont6x11
 
 
@@ -509,7 +508,7 @@ sudo apt-get install fbi imagemagick wireless-tools fonts-dejavu libpng-dev imag
 ```
 nano ~/.bashrc
 ```
-### Add the following:
+#### Add the following:
 ```
 sudo fbi -T 2 -noverbose -a /home/Newnop/LoadingLogo.png
 
