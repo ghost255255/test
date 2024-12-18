@@ -291,7 +291,10 @@ sudo nano /usr/share/plymouth/themes/pix/pix.script
 sudo nano /boot/config.txt
 ```
 
-## 3.4 Configure Boot loader:
+## 3.4 Configure Boot loader and Display Rotate:
+
+### Display Rotate
+#### change display_rotate=0 (if its not 0)
 
 ### add these lines below
 ```
@@ -479,7 +482,7 @@ sudo nano /boot/config.txt
 ## 4.5 Configure Boot loader and Display Rotate:
 
 ### Display Rotate
-#### change display_rotate=0 to display_rotate=3
+#### change display_rotate=0 (if its not 0)
 
 ### add these lines below
 ```
@@ -514,7 +517,7 @@ sleep 1
 
 SSID=$(iwgetid -r)
 IP_ADDRESS=$(hostname -I | awk '{print $1}')
-TEXT="SSID: $SSID\nIP Address: $IP_ADDRESS\nType the ip address\nin your browser and\nlog into the portal\n\n\nDevice SSID: newnop\nDevice PASS: 12345678\n\n\nNewnopcast pass: 31415926"
+TEXT="SSID: $SSID\nIP Address: $IP_ADDRESS\nType the ip address\nin your browser and\nlog into the portal\n\n\nDevice SSID: NewnopSM\nDevice PASS: 12345678\n\n\nNewnopcast pass: 31415926"
 
 sleep 3
 
