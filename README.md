@@ -111,7 +111,7 @@ sudo apt-get install fbi
 ```
 
 
-## 2.3 remove boottext showing in bootscreen
+## 2.3 remove boot text showing in boot screen
 
 ### Modify Plymouth theme:
 ```
@@ -135,7 +135,7 @@ sudo nano /usr/share/plymouth/themes/pix/pix.script
 sudo nano /boot/config.txt
 ```
 
-## 2.3 Configure Bootloader and Display Rotate:
+## 2.3 Configure Boot loader and Display Rotate:
 
 ### Display Rotate
 #### change display_rotate=0 to display_rotate=3
@@ -248,10 +248,10 @@ make
 ```
 
 
-## 3.2 Setup Bootimages
+## 3.2 Setup Boot images
 
 ### replace raspberry IP to <RPI_IP> (etc: 192.168.4.1)
-### Transfer the Bootimages to the Raspberry Pi:
+### Transfer the Boot images to the Raspberry Pi:
 ```
 scp LoadingLogo.png Newnop@<RPI_IP>:/home/Newnop/
 ```
@@ -264,7 +264,7 @@ sudo apt-get install fbi
 ```
 
 
-## 3.3 remove boottext showing in bootscreen
+## 3.3 remove boot text showing in boot screen
 
 ### Modify Plymouth theme:
 ```
@@ -288,7 +288,7 @@ sudo nano /usr/share/plymouth/themes/pix/pix.script
 sudo nano /boot/config.txt
 ```
 
-## 3.4 Configure Bootloader:
+## 3.4 Configure Boot loader:
 
 ### add these lines below
 ```
@@ -329,13 +329,8 @@ convert -size 320x480 xc:none -gravity center -pointsize 16 -fill white -annotat
 convert /home/Newnop/LoadingLogo_with_text.png /home/Newnop/rotated_text.png -gravity south -composite /home/Newnop/LoadingLogo_with_rotated_text.png
 sudo fbi -T 2 -noverbose -a /home/Newnop/LoadingLogo_with_rotated_text.png
 
-
-cd RPiPlay/build
-
-sudo ldconfig
-export LD_LIBRARY_PATH=/opt/vc/lib:$LD_LIBRARY_PATH
-find /opt -name "libbrcmEGL.so"
-./rpiplay -a hdmi -l -n NewnopCast
+cd lazycast
+./all.sh
 ```
 
 ### Reboot:
