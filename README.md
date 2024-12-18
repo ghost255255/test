@@ -60,6 +60,7 @@ sudo reboot
 ```
 
 
+
 # 2. For IOS Setup
 ## 2.1 RPiPlay Installation
 
@@ -191,6 +192,7 @@ find /opt -name "libbrcmEGL.so"
 ```
 sudo reboot
 ```
+
 
 
 # 3. For Android Setup
