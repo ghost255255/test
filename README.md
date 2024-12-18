@@ -137,10 +137,10 @@ sudo nano /usr/share/plymouth/themes/pix/pix.script
 sudo nano /boot/config.txt
 ```
 
-Display Rotate
+### Display Rotate
 #### change display_rotate=0 to display_rotate=3
 
-#### add these lines below
+#### then add these lines below
 ```
 disable_splash=1
 avoid_warnings=1
