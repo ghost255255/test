@@ -110,7 +110,7 @@ sudo apt-get install fbi
 ```
 
 
-## 2.3 Configure Bootloader and remove boottext showing in bootscreen
+## 2.3 remove boottext showing in bootscreen
 
 ### Modify Plymouth theme:
 ```
@@ -135,8 +135,8 @@ sudo nano /boot/config.txt
 ```
 
 ### Add the following:
-# change display_rotate=0 to display_rotate=3
-# add these lines below
+### change display_rotate=0 to display_rotate=3
+### add these lines below
 ```
 disable_splash=1
 avoid_warnings=1
